@@ -83,3 +83,62 @@ where last_name regexp 'b[ru]';
 select *
 from customers 
 where phone is not null;
+
+select * from orders
+where shipped_date is null;
+
+
+-- ORDER BY --
+select * from customers
+order by first_name desc;
+
+select *, points+10 as new_points
+from customers
+order by birth_date, last_name;
+
+
+-- TEST QUESTION --
+select *, quantity*unit_price as total_price
+from order_items
+where order_id = 2
+order by total_price desc;
+
+
+-- LIMIT (should always come last)  -- 
+select *
+from customers
+limit 300;
+
+select *
+from customers
+limit 6, 3; -- skip the first 5 elements and take the next 3
+
+
+-- TEST -- 
+-- get the most loyal customers (highest points) --
+select *
+from customers
+order by points desc
+limit 3;
+
+
+-- INNER JOINS AND MORE ALIASES--
+select order_id, first_name, o.customer_id, last_name
+from orders o
+join customers c on o.customer_id = c.customer_id;
+
+
+-- TEST --
+SELECT order_id, oi.product_id, quantity, oi.unit_price
+FROM order_items oi
+JOIN products p ON oi.product_id = p.product_id;
+
+
+
+
+
+
+
+
+
+
