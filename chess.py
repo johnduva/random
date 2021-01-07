@@ -1,6 +1,7 @@
 # Determine fewest number of moves it takes to get a knight at location [6,6] to the bishop at [4,4] 
 # without landing on any of the diagonal spaces threatened by the bishop.
 # If there is no solution then return -1.
+# Note: Size of chess board is 8x8 (base 0)
 
 import numpy as np
 
