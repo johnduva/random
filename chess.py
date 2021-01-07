@@ -38,14 +38,11 @@ for i in range(0,7):
     while [4,4] in unmovable:
         unmovable.remove([4,4])
     
-
+# Determine all allowable moves by the knight that either move it closer to the bishop or maintain the same distance.
+# Note:: Remember that you cannot land on a threatened spot
 knight = [[startRow, startCol]]
 bishop = [bishopRow, bishopCol]
-
-
-# dist = [bishopRow-row, bishopCol-col] 
 count = 1
-
 while bishop not in knight:
     possible = len(knight)
     for i,locations in enumerate(knight):
