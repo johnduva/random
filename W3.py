@@ -43,3 +43,23 @@ x ** y
 
 # floor division
 x // y
+
+# list comprehension
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if "a" in x]
+
+# the expression can contain conditions
+newlist = [x if x != "banana" else "orange" for x in fruits]
+
+# custom sort function
+# (i.e. based on distance from 50)
+def myfunc(n):
+   return abs(n - 50)
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key = myfunc)
+
+# You cannot copy a list simply by typing list2 = list1, because: list2 will only be a reference to list1, and changes made in list1 will automatically also be made in list2.
+mylist = thislist.copy()
+
+
+
