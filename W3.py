@@ -61,5 +61,25 @@ thislist.sort(key = myfunc)
 # You cannot copy a list simply by typing list2 = list1, because: list2 will only be a reference to list1, and changes made in list1 will automatically also be made in list2.
 mylist = thislist.copy()
 
+# unpacking a tuple
+(green, yellow, red) = fruits
+
+# unpacking using asterisk
+fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
+(green, *tropical, red) = fruits
+
+# shorthand 'if/else' statement
+print("A") if a > b else print("B")
+# three conditions
+print("A") if a > b else print("=") if a == b else print("B")
+
+# If you do not know how many arguments that will be passed into your function, 
+# add '*' before the parameter name in the function definition
+def my_function(*kids):
+  print("The youngest child is " + kids[-1])
+
+# 
+  
+
 
 
