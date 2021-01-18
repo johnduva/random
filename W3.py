@@ -81,7 +81,6 @@ def my_function(*kids):
 # If you do not know how many keyword arguments will be passed into your function, 
 # add '**' before the parameter name in the function definition.
   
-
 # class syntax
 class Person:
   def __init__(mysillyobject, name, age):
@@ -93,5 +92,10 @@ class Person:
 
 p1 = Person("John", 36)
 p1.myfunc()
+
+# view all methods in a module
+import math
+dir(math)
+
 
 
