@@ -82,5 +82,16 @@ def my_function(*kids):
 # add '**' before the parameter name in the function definition.
   
 
+# class syntax
+class Person:
+  def __init__(mysillyobject, name, age):
+    mysillyobject.name = name
+    mysillyobject.age = age
+
+  def myfunc(abc):
+    print("Hello my name is " + abc.name)
+
+p1 = Person("John", 36)
+p1.myfunc()
 
 
